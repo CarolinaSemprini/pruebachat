@@ -35,7 +35,7 @@ app.use("/api", apiRoutes);
 
 // Página principal
 app.get("/", (req, res) => {
-    res.redirect("/api/chat");
+    res.render("chat", { layout: "main" });
 });
 
 const PORT = process.env.PORT || 3000;

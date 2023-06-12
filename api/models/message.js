@@ -7,6 +7,11 @@ const messageSchema = new Schema({
         type: String,
         required: true,
     },
+    sender: {
+        type: Schema.Types.ObjectId,
+        ref: "User", // Nombre del esquema de usuarios
+        required: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
@@ -16,3 +21,4 @@ const messageSchema = new Schema({
 const Message = model("Message", messageSchema);
 
 export default Message;
+

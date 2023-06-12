@@ -1,11 +1,10 @@
-{{#extends 'layouts/main'}}
-
-{{#content 'title'}}
-Chat
-{{/content}}
-
-{{#content 'body'}}
-<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat</title>
+  <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+</head>
+<body>
   <h1>Chat</h1>
 
   <div id="messages">
@@ -17,10 +16,12 @@ Chat
     {{/each}}
   </div>
 
-  <form id="message-form" action="/api/chat" method="POST">
-    <input type="text" name="sender" placeholder="Your Name" required>
-    <input type="text" name="content" placeholder="Message" required>
+  <form id="message-form">
+    <input type="text" id="sender-input" placeholder="Your Name" required>
+    <input type="text" id="content-input" placeholder="Message" required>
     <button type="submit">Send</button>
   </form>
-</div>
-{{/content}}
+
+  <script src="/public/js/script.js"></script>
+</body>
+</html>
