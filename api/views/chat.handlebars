@@ -1,0 +1,26 @@
+{{#extends 'layouts/main'}}
+
+{{#content 'title'}}
+Chat
+{{/content}}
+
+{{#content 'body'}}
+<div class="container">
+  <h1>Chat</h1>
+
+  <div id="messages">
+    {{#each messages}}
+      <div class="message">
+        <span class="sender">{{sender}}:</span>
+        <span class="content">{{content}}</span>
+      </div>
+    {{/each}}
+  </div>
+
+  <form id="message-form" action="/api/chat" method="POST">
+    <input type="text" name="sender" placeholder="Your Name" required>
+    <input type="text" name="content" placeholder="Message" required>
+    <button type="submit">Send</button>
+  </form>
+</div>
+{{/content}}

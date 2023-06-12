@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Messages</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+  <h1>Messages</h1>
+  <ul>
+    {{#each messages}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <form action="/api/messages" method="POST">
+    <input type="text" name="message" placeholder="Enter your message">
+    <button type="submit">Send</button>
+  </form>
+  <script src="/js/messages.js"></script>
+
+</body>
+</html>
